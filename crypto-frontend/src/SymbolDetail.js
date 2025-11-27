@@ -198,7 +198,7 @@ const SymbolDetail = () => {
           </div>
           <div className="stat-card">
             <p className="stat-label">Average daily volume</p>
-            <p className="stat-value">{avgVolume.toLocaleString(undefined, { maximumFractionDigits: 0 })}</p>
+            <p className="stat-value">${avgVolume.toLocaleString(undefined, { maximumFractionDigits: 0 })}</p>
             <span className="stat-pill neutral">Volume (last {tableData.length || 0} days)</span>
           </div>
           <div className="stat-card">
@@ -264,7 +264,10 @@ const SymbolDetail = () => {
                   </defs>
                   <CartesianGrid strokeDasharray="4 4" stroke="rgba(255,255,255,0.1)" />
                   <XAxis dataKey="dateLabel" stroke="rgba(255,255,255,0.6)" />
-                  <YAxis stroke="rgba(255,255,255,0.6)" />
+                  <YAxis 
+                    stroke="rgba(255,255,255,0.6)"
+                    tickFormatter={(value) => `$${value.toFixed(2)}`}
+                  />
                   <Tooltip
                     contentStyle={{
                       backgroundColor: '#11141f',
@@ -272,6 +275,7 @@ const SymbolDetail = () => {
                       borderRadius: '12px',
                       color: '#fff',
                     }}
+                    formatter={(value) => [`$${value.toFixed(2)}`, 'Close']}
                   />
                   <Area
                     type="monotone"

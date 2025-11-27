@@ -267,9 +267,13 @@ const Homepage = () => {
                   <AreaChart data={btcData}>
                     <CartesianGrid strokeDasharray="3 3" stroke="rgba(255, 255, 255, 0.05)" />
                     <XAxis dataKey="date" stroke="rgba(255, 255, 255, 0.4)" />
-                    <YAxis stroke="rgba(255, 255, 255, 0.4)" />
+                    <YAxis 
+                      stroke="rgba(255, 255, 255, 0.4)"
+                      tickFormatter={(value) => `$${value.toFixed(2)}`}
+                    />
                     <Tooltip
                       contentStyle={{ backgroundColor: '#1a1a1a', border: '1px solid rgba(255, 255, 255, 0.1)', color: '#fff' }}
+                      formatter={(value) => [`$${value.toFixed(2)}`, 'Close']}
                     />
                     <Area
                       type="monotone"
@@ -294,9 +298,13 @@ const Homepage = () => {
                   <AreaChart data={ethData}>
                     <CartesianGrid strokeDasharray="3 3" stroke="rgba(255, 255, 255, 0.05)" />
                     <XAxis dataKey="date" stroke="rgba(255, 255, 255, 0.4)" />
-                    <YAxis stroke="rgba(255, 255, 255, 0.4)" />
+                    <YAxis 
+                      stroke="rgba(255, 255, 255, 0.4)"
+                      tickFormatter={(value) => `$${value.toFixed(2)}`}
+                    />
                     <Tooltip
                       contentStyle={{ backgroundColor: '#1a1a1a', border: '1px solid rgba(255, 255, 255, 0.1)', color: '#fff' }}
+                      formatter={(value) => [`$${value.toFixed(2)}`, 'Close']}
                     />
                     <Area
                       type="monotone"
@@ -324,9 +332,13 @@ const Homepage = () => {
                   <LineChart data={xrpData}>
                     <CartesianGrid strokeDasharray="3 3" stroke="rgba(255, 255, 255, 0.05)" />
                     <XAxis dataKey="date" stroke="rgba(255, 255, 255, 0.4)" />
-                    <YAxis stroke="rgba(255, 255, 255, 0.4)" />
+                    <YAxis 
+                      stroke="rgba(255, 255, 255, 0.4)"
+                      tickFormatter={(value) => `$${value.toFixed(2)}`}
+                    />
                     <Tooltip
                       contentStyle={{ backgroundColor: '#1a1a1a', border: '1px solid rgba(255, 255, 255, 0.1)', color: '#fff' }}
+                      formatter={(value) => [`$${value.toFixed(2)}`, 'Close']}
                     />
                     <Line
                       type="monotone"
@@ -351,9 +363,13 @@ const Homepage = () => {
                   <LineChart data={bnbData}>
                     <CartesianGrid strokeDasharray="3 3" stroke="rgba(255, 255, 255, 0.05)" />
                     <XAxis dataKey="date" stroke="rgba(255, 255, 255, 0.4)" />
-                    <YAxis stroke="rgba(255, 255, 255, 0.4)" />
+                    <YAxis 
+                      stroke="rgba(255, 255, 255, 0.4)"
+                      tickFormatter={(value) => `$${value.toFixed(2)}`}
+                    />
                     <Tooltip
                       contentStyle={{ backgroundColor: '#1a1a1a', border: '1px solid rgba(255, 255, 255, 0.1)', color: '#fff' }}
+                      formatter={(value) => [`$${value.toFixed(2)}`, 'Close']}
                     />
                     <Line
                       type="monotone"
@@ -378,9 +394,13 @@ const Homepage = () => {
                   <LineChart data={solData}>
                     <CartesianGrid strokeDasharray="3 3" stroke="rgba(255, 255, 255, 0.05)" />
                     <XAxis dataKey="date" stroke="rgba(255, 255, 255, 0.4)" />
-                    <YAxis stroke="rgba(255, 255, 255, 0.4)" />
+                    <YAxis 
+                      stroke="rgba(255, 255, 255, 0.4)"
+                      tickFormatter={(value) => `$${value.toFixed(2)}`}
+                    />
                     <Tooltip
                       contentStyle={{ backgroundColor: '#1a1a1a', border: '1px solid rgba(255, 255, 255, 0.1)', color: '#fff' }}
+                      formatter={(value) => [`$${value.toFixed(2)}`, 'Close']}
                     />
                     <Line
                       type="monotone"
@@ -405,9 +425,13 @@ const Homepage = () => {
                   <LineChart data={dogeData}>
                     <CartesianGrid strokeDasharray="3 3" stroke="rgba(255, 255, 255, 0.05)" />
                     <XAxis dataKey="date" stroke="rgba(255, 255, 255, 0.4)" />
-                    <YAxis stroke="rgba(255, 255, 255, 0.4)" />
+                    <YAxis 
+                      stroke="rgba(255, 255, 255, 0.4)"
+                      tickFormatter={(value) => `$${value.toFixed(2)}`}
+                    />
                     <Tooltip
                       contentStyle={{ backgroundColor: '#1a1a1a', border: '1px solid rgba(255, 255, 255, 0.1)', color: '#fff' }}
+                      formatter={(value) => [`$${value.toFixed(2)}`, 'Close']}
                     />
                     <Line
                       type="monotone"
